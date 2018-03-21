@@ -9,5 +9,6 @@ public class OldneighborhoodRegisterApplication {
 	public static void main(String[] args) {
 		
 		SpringApplication.run(OldneighborhoodRegisterApplication.class, args);
+		
 	}
 }
