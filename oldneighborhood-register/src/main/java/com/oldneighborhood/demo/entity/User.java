@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -22,6 +25,8 @@ import lombok.RequiredArgsConstructor;
 * @date 2018年3月21日  
 *
  */
+@Entity
+@Table(name="user")
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
@@ -31,6 +36,7 @@ import lombok.RequiredArgsConstructor;
 public class User implements Serializable{
 	
 	private static final long serialVersionUID = 3179473115848813375L;
+	@Id
 	@NonNull
 	private String u_ID;
 	@NonNull

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.oldneighborhood.demo.dao.UserDao;
 import com.oldneighborhood.demo.entity.User;
+import com.oldneighborhood.demo.entity.UserType;
 import com.oldneighborhood.demo.service.RegisterService;
 
 /**
@@ -22,7 +23,6 @@ import com.oldneighborhood.demo.service.RegisterService;
 *
  */
 @RestController
-//@RequestMapping("/login")
 public class RegisterController {
 	
 	@Autowired
@@ -31,11 +31,10 @@ public class RegisterController {
 	UserDao userdao;
 	//http://localhost:8081/oldneighborhood/register
 	@RequestMapping("/register")
-	public boolean register(User user) {
+	public boolean register(User user, UserType usertype) {
 		Date date = new Date();
-//		registerService.signup(user);
-		userdao.userSignup("2011111111", "bryan", "bryan", "templatet/", 0, "12323232323", "Ren@iusd.com", date, "nothing");
-		return true;
+		User auser = new User("a111111111", "bryan", "bryan", "templatet/", 0, "12323232323", "Ren@iusd.com", date, "nothing", null);
+		return registerService.signup(auser);
 	}
 
 }

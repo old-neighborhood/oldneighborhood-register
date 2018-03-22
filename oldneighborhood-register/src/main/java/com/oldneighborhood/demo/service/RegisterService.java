@@ -2,6 +2,7 @@ package com.oldneighborhood.demo.service;
 
 
 import com.oldneighborhood.demo.entity.User;
+import com.oldneighborhood.demo.entity.UserType;
 
 /**
  * 
