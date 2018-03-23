@@ -1,55 +1,51 @@
-//package com.oldneighborhood.demo.entity;
-//
-//import java.io.Serializable;
-//import java.sql.Timestamp;
-//import java.util.Date;
-//
-//import javax.persistence.Column;
-//import javax.persistence.Entity;
-//import javax.persistence.Id;
-//import javax.persistence.Table;
-//
-//import org.springframework.format.annotation.DateTimeFormat;
-//
-//import lombok.AllArgsConstructor;
-//import lombok.Builder;
-//import lombok.Data;
-//import lombok.NoArgsConstructor;
-//import lombok.NonNull;
-//import lombok.RequiredArgsConstructor;
-//
-//@Entity
-//@Table(name="")
-//@NoArgsConstructor
-//@AllArgsConstructor
-//@RequiredArgsConstructor
-//@Data
-//@Builder
-//
-//public class Saler implements Serializable{
-//	private static final long serialVersionUID = -4689353556227143131L;
-//	
-//	@Id
-//	private String u_ID;
-//	@Column(length=100)
-//	@NonNull
-//	private String u_name;
-//	@Column(length=100)
-//	@NonNull
-//	private String u_password;
-//	
-//	@NonNull
-//	private String u_image;
-//	@NonNull
-//	private Integer u_score;
-//	private String u_tele;
-//	private String u_email;
-//	private String u_address;
-//	@NonNull
+package com.oldneighborhood.demo.entity;
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
+@Entity
+@Table(name="saler")
+@NoArgsConstructor
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Data
+@Builder
+
+public class Saler implements Serializable{
+	private static final long serialVersionUID = -1696099100838066036L;
+	
+	@Id
+	@Column(length=10)
+	private String s_ID;
+	@NonNull
+	private String s_name;
+	@NonNull
+	private String s_password;
+	
+	@Column(columnDefinition="varchar(500) default 'classpath:/icons-portrait.png'")
+	private String s_image;
+	private Integer s_score;
+	@NonNull
+	private String s_tele;
+	private String s_email;
+	private String s_address;
 //	@DateTimeFormat(pattern="yyyy-MM-dd") //标注改属性只接收指定格式的日期  默认  yyyy/MM/dd
-//	private Date u_birthday;
-//	private String u_signature;
-//	@Column(columnDefinition="timestamp not null default now()" , updatable=false)
-//	private Timestamp u_date;
-//
-//}
+//	private Date s_birthday;
+	private String s_signature;
+	@Column(columnDefinition="timestamp not null default now()" , updatable=false)
+	private Timestamp s_date;
+
+}
