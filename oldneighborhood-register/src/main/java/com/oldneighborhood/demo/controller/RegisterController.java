@@ -21,9 +21,9 @@ import com.oldneighborhood.demo.service.UserService;
  * @date 2018年3月22日
  * 
  * @url:	"http://localhost:8081/oldneighborhood/usersignup"
- * @return:	"result":"success"/"result":"fail"
+ * @return:	"result":"success"/"result":"error"
  * @url:	"http://localhost:8081/oldneighborhood/salersignup"
- * @return:	"result":"success"/"result":"fail"
+ * @return:	"result":"success"/"result":"error"
  */
 @RestController
 public class RegisterController {
@@ -41,7 +41,7 @@ public class RegisterController {
 				reqMap.get("tele").toString());
 //		User testuser = new User("bryanJ", "qwertyu", "13612341234");
 		flag = userService.userSignup(user);
-		return flag ? "\"result\":\"success\"" : "\"result\":\"fail\"";
+		return flag ? "\"result\":\"success\"" : "\"result\":\"error\"";
 	}
 
 	@Autowired
@@ -56,7 +56,7 @@ public class RegisterController {
 //		Saler testsaler = new Saler("bryanJ", "qwertyu", "13612341234");
 		boolean flag = false;
 		flag = salerService.salerSignup(saler);
-		return flag ? "\"result\":\"success\"" : "\"result\":\"fail\"";
+		return flag ? "\"result\":\"success\"" : "\"result\":\"error\"";
 	}
 
 }
