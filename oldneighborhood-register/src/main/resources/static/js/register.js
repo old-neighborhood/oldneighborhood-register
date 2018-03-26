@@ -97,9 +97,6 @@ window.onload = function ()
                 btn.value = "重新发送 (" + sleep-- + ")";
             }, 1000);            
         }
-        
-
-        
     }
 }
 
@@ -111,6 +108,7 @@ $("#register").click(function(){
 	var type=$(':radio:checked').val();
 	
 	//验证码验证
+	//在前端实现不安全，需要在后端实现
 	$.ajax({
 		type:"POST",
 		contentType:'application/json',
