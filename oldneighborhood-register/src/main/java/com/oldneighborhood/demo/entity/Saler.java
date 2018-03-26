@@ -25,6 +25,7 @@ import lombok.RequiredArgsConstructor;
 @Builder
 
 public class Saler implements Serializable{
+	
 	private static final long serialVersionUID = -1696099100838066036L;
 	
 	@Id
@@ -33,12 +34,12 @@ public class Saler implements Serializable{
 	private String s_name;
 	@NonNull
 	private String s_password;
+	@NonNull
+	private String s_tele;
 	
 	@Column(columnDefinition="varchar(500) default 'classpath:/icons-portrait.png'")
 	private String s_image;
 	private Integer s_score;
-	@NonNull
-	private String s_tele;
 	private String s_email;
 	private String s_address;
 //	@DateTimeFormat(pattern="yyyy-MM-dd") //标注改属性只接收指定格式的日期  默认  yyyy/MM/dd
