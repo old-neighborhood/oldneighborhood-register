@@ -20,9 +20,9 @@ public class SalerServiceImpl implements SalerService{
 			return false;
 		}
 		saler.setS_ID(genID());
-		System.out.println(saler.getS_ID());
 		
 		salerDao.save(saler);
+		System.out.println(saler.getS_ID());
 		return true;
 	}
 	

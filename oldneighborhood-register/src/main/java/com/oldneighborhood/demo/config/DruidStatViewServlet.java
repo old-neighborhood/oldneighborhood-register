@@ -10,7 +10,7 @@ import javax.servlet.annotation.WebServlet;
 			initParams = {
 					@WebInitParam(name="allow" , value="127.0.0.1") ,
 //					@WebInitParam(name="deny" , value="") ,
-					@WebInitParam(name="loginUsername" , value="lg") , 
+					@WebInitParam(name="loginUsername" , value="lg1") , 
 					@WebInitParam(name="loginPassword" , value="123") , 
 					@WebInitParam(name="resetEnable" , value="true")
 			}

@@ -4,9 +4,11 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,11 +32,12 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Data
 @Builder
-
+@GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class User implements Serializable{
 	
 	private static final long serialVersionUID = 3179473115848813375L;
 	@Id
+	@GeneratedValue(generator = "jpa-uuid")
 	private String u_ID;
 	@NonNull
 	private String u_name;
