@@ -74,9 +74,6 @@ window.onload = function ()
 					
             	}
             })
-        	
-            
-            
             this.style.backgroundColor = 'rgb(243, 182, 182)';
             this.disabled = "disabled";
             this.style.cursor = "wait";
