@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Description: 默认加载页面
  * @author user005
  * @date 2018年3月26日
- * @url:	"http://localhost:8081/oldneighborhood/register
+ * @url:	"http://localhost:8081/oldneighborhood/register"
  * @return:	page
  */
 @Controller

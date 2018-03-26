@@ -20,19 +20,18 @@ import com.oldneighborhood.demo.service.UserService;
  * @author user005
  * @date 2018年3月22日
  * 
- * @url:	"http://localhost:8081/oldneighborhood/register/usersignup
+ * @url:	"http://localhost:8081/oldneighborhood/usersignup"
  * @return:	"result":"success"/"result":"fail"
- * @url:	"http://localhost:8081/oldneighborhood/register/salersignup
+ * @url:	"http://localhost:8081/oldneighborhood/salersignup"
  * @return:	"result":"success"/"result":"fail"
  */
 @RestController
-@RequestMapping(path = { "/register" }, method = { RequestMethod.GET })
 public class RegisterController {
 
 	@Autowired
 	private UserService userService;
 
-	// http://localhost:8081/oldneighborhood/register/usersignup
+	// http://localhost:8081/oldneighborhood/usersignup
 	@RequestMapping(path = { "/usersignup" }, method = { RequestMethod.GET })
 	public String userSingUp(@RequestBody Map<String, Object> reqMap) {
 		boolean flag = false;
@@ -47,7 +46,7 @@ public class RegisterController {
 
 	@Autowired
 	private SalerService salerService;
-	// http://localhost:8081/oldneighborhood/register/salersignup
+	// http://localhost:8081/oldneighborhood/salersignup
 	@RequestMapping(path = { "/salersignup" }, method = { RequestMethod.GET })
 	public String salerSignup(@RequestBody Map<String, Object> reqMap) {
 		Saler saler = new Saler(
