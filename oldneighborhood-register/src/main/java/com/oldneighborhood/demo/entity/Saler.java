@@ -28,7 +28,6 @@ public class Saler implements Serializable{
 	private static final long serialVersionUID = -1696099100838066036L;
 	
 	@Id
-	@Column(length=10)
 	private String s_ID;
 	@NonNull
 	private String s_name;
