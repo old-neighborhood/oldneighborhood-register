@@ -6,10 +6,15 @@
 $().ready(function() {
     $("#register_form").validate({
         rules: {
-            rUsername: "required",
+            rUsername: {
+                required: true,
+                minlength: 5,
+            	maxlength: 32
+            },
             rPassword: {
                 required: true,
-                minlength: 5
+                minlength: 5,
+            	maxlength: 32
             },
             rConfirmPassword: {
                 required: true,
@@ -17,15 +22,20 @@ $().ready(function() {
             },
             rEmail: {
                 required: true,
-                email: true
+  //              email: true
             },
             rCode:"required"
         },
         messages: {
-            rUsername: "请输入姓名",
+            rUsername: {
+                required: "请输入用户名",
+                minlength: "不少于{0}个字符",
+                maxlength: "不大于{0}个字符"
+            },
             rPassword: {
                 required: "请输入密码",
-                minlength: "密码不能小于{0}个字符"
+                minlength: "密码不能小于{0}个字符",
+                maxlength: "密码不能超过{0}个字符"
             },
             rConfirmPassword: {
                 required: "请再次输入密码",
@@ -33,7 +43,7 @@ $().ready(function() {
             },
             rEmail: {
                 required: "请输入手机号码",
-                email: "请输入有效手机号码"
+//                email: "请输入有效手机号码"
             },
             rCode:{
                 required: "请输入验证码"
