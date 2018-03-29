@@ -38,22 +38,28 @@ public class User implements Serializable{
 	private static final long serialVersionUID = 3179473115848813375L;
 	@Id
 //	@GeneratedValue(generator = "jpa-uuid")
+	@Column(columnDefinition="char(32) not null")
 	private String u_ID;
 	@NonNull
+	@Column(columnDefinition="varchar(32) not null")
 	private String u_name;
 	@NonNull
+	@Column(columnDefinition="varchar(32) not null")
 	private String u_password;
 	
-	@Column(columnDefinition="varchar(500) default 'classpath:/icons-portrait.png' ")
+	@Column(columnDefinition="varchar(255) not null default '/image/icons-portrait.png' ")
 	private String u_image;
-	@Column(columnDefinition="int(5) default 0")
+	@Column(columnDefinition="int not null default 0")
 	private Integer u_score;
 	@NonNull
+	@Column(columnDefinition="char(11) not null")
 	private String u_tele;
+	@Column(columnDefinition="varchar(50) null default null")
 	private String u_email;
 //	@DateTimeFormat(pattern="yyyy-MM-dd")
 //	private Date u_birthday;
 //	private String address;
+	@Column(columnDefinition="varchar(100) not null default '这个新手不太冷！'")
 	private String u_signature;
 	@Column(columnDefinition="timestamp not null default now()" , updatable=false)
 	private Timestamp u_date;

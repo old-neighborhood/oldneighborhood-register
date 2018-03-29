@@ -38,14 +38,18 @@ public class UserServiceImpl implements UserService {
 		 * 的结果串会比较长。
 		 */
 		user.setU_ID(UUID.randomUUID().toString().replace("-", ""));
+		user.setU_image("/image/icons-portrait.png");
+		user.setU_score(0);
+		user.setU_signature("这个新手不太冷！");
 		System.out.println(user.getU_ID());
 //		User getuser = userDao.save(user);
-		User getuser = userDao.saveAndFlush(user);
-		System.out.println(getuser.getU_ID());
-//		int result = userDao.userSignup(user.getU_ID(), user.getU_name(), user.getU_password(), user.getU_image(),
-//				user.getU_score(), user.getU_tele(), user.getU_email(), user.getU_birthday(), user.getU_signature());
-//		return result == 1 ? true : false;
-		 return true;
+		User getuser = userDao.save(user);
+		System.out.println(getuser);
+		if (getuser!=null) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 }

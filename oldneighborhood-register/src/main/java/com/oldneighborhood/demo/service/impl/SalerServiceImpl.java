@@ -18,16 +18,22 @@ public class SalerServiceImpl implements SalerService{
 	@Override
 	@Transactional
 	public boolean salerSignup(Saler saler) {
-		
 		LegalCheckImpl lci = new LegalCheckImpl();
 		if (!lci.isSalerLegal(saler)) {
 			System.out.println("注册字符不合法");
 			return false;
 		}
 		saler.setS_ID(UUID.randomUUID().toString().replace("-", ""));
+		saler.setS_image("/image/icons-portrait.png");
+		saler.setS_score(0);
+		saler.setS_signature("这个新手不太冷！");
 		Saler getsaler = salerDao.saveAndFlush(saler);
-		System.out.println(getsaler.getS_ID());
-		return true;
+		System.out.println(getsaler);
+		if (getsaler!=null) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 
