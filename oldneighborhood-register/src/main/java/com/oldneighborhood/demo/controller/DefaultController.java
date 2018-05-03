@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class DefaultController {
 	
 
-	@RequestMapping(path= {"/register"}, method= {RequestMethod.GET})
+	@RequestMapping(path= {"/info"}, method= {RequestMethod.GET})
 	public String register() {
-		return "/register";
+		return "info";
 	}
 
 }
