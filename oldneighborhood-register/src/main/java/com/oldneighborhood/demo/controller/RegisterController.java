@@ -38,7 +38,7 @@ public class RegisterController {
 		User user = new User(
 				reqMap.get("username").toString(),
 				reqMap.get("password").toString(),
-				reqMap.get("tele").toString());
+				reqMap.get("email").toString());
 //		User testuser = new User("bryanJ", "qwertyu", "13612341234");
 		flag = userService.userSignup(user);
 		System.out.println(flag);
@@ -53,7 +53,7 @@ public class RegisterController {
 		Saler saler = new Saler(
 				reqMap.get("username").toString(),
 				reqMap.get("password").toString(),
-				reqMap.get("tele").toString());
+				reqMap.get("email").toString());
 //		Saler testsaler = new Saler("bryanJ", "qwertyu", "13612341234");
 		boolean flag = false;
 		flag = salerService.salerSignup(saler);

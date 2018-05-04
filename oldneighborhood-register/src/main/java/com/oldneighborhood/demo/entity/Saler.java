@@ -38,15 +38,15 @@ public class Saler implements Serializable{
 	@Column(columnDefinition="varchar(32) not null")
 	private String s_password;
 	@NonNull
-	@Column(columnDefinition="char(11) not null")
+	@Column(columnDefinition="varchar(50) not null")
+	private String s_email;
+	@Column(columnDefinition="char(11) null default null")
 	private String s_tele;
 	
 	@Column(columnDefinition="varchar(255) not null default '/image/icons-portrait.png' ")
 	private String s_image;
 	@Column(columnDefinition="int not null default 0")
 	private Integer s_score;
-	@Column(columnDefinition="varchar(50) null default null")
-	private String s_email;
 	@Column(columnDefinition="varchar(50) null default null")
 	private String s_address;
 //	@DateTimeFormat(pattern="yyyy-MM-dd") //标注改属性只接收指定格式的日期  默认  yyyy/MM/dd

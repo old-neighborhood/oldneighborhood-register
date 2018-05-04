@@ -7,7 +7,7 @@ public class LegalCheckImpl {
 
 	public boolean isUserLegal(User user) {
 		if (validateName(user.getU_name()) && validatePassword(user.getU_password())
-				&& validateTele(user.getU_tele())) {
+				&& validateEmail(user.getU_email())) {
 			return true;
 		}
 		return false;

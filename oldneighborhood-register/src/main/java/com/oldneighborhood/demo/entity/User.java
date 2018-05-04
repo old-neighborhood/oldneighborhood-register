@@ -46,16 +46,16 @@ public class User implements Serializable{
 	@NonNull
 	@Column(columnDefinition="varchar(32) not null")
 	private String u_password;
+	@Column(columnDefinition="varchar(50) not null")
+	private String u_email;
 	
 	@Column(columnDefinition="varchar(255) not null default '/image/icons-portrait.png' ")
 	private String u_image;
 	@Column(columnDefinition="int not null default 0")
 	private Integer u_score;
 	@NonNull
-	@Column(columnDefinition="char(11) not null")
+	@Column(columnDefinition="char(11) null default null")
 	private String u_tele;
-	@Column(columnDefinition="varchar(50) null default null")
-	private String u_email;
 //	@DateTimeFormat(pattern="yyyy-MM-dd")
 //	private Date u_birthday;
 //	private String address;
