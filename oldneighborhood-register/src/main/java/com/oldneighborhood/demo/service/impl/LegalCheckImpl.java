@@ -42,7 +42,8 @@ public class LegalCheckImpl {
 	 * @Description: 验证邮箱
 	 */
 	public boolean validateEmail(String email) {
-		String regex = "^[/w-]+(/.[/w-]+)*@[/w-]+(/.[/w-]+)+$";
+		String regex = "^\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z0-9]+$";
+//		String regex = "^[/w-]+(/.[/w-]+)*@[/w-]+(/.[/w-]+)+$";
 		if (email.matches(regex)) {
 			return true;
 		}
