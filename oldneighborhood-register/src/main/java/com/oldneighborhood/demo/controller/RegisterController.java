@@ -30,7 +30,6 @@ public class RegisterController {
 	@Autowired
 	private UserService userService;
 
-	// http://localhost:8081/oldneighborhood/usersignup
 	@RequestMapping(path = { "/usersignup" })
 	public String userSingUp(@RequestBody Map<String, Object> reqMap) {
 		System.out.println(reqMap);
@@ -39,7 +38,6 @@ public class RegisterController {
 				reqMap.get("username").toString(),
 				reqMap.get("password").toString(),
 				reqMap.get("email").toString());
-//		User testuser = new User("bryanJ", "qwertyu", "13612341234");
 		flag = userService.userSignup(user);
 		System.out.println(flag);
 		return flag ? "{\"result\":\"success\"}" : "{\"result\":\"error\"}";

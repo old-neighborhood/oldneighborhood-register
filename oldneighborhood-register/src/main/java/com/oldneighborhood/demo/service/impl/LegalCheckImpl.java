@@ -15,7 +15,7 @@ public class LegalCheckImpl {
 
 	public boolean isSalerLegal(Saler saler) {
 		if (validateName(saler.getS_name()) && validatePassword(saler.getS_password())
-				&& validateTele(saler.getS_tele())) {
+				&& validateEmail(saler.getS_email())) {
 			return true;
 		}
 		return false;

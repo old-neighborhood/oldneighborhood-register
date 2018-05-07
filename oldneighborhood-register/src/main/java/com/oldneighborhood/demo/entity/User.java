@@ -46,6 +46,7 @@ public class User implements Serializable{
 	@NonNull
 	@Column(columnDefinition="varchar(32) not null")
 	private String u_password;
+	@NonNull
 	@Column(columnDefinition="varchar(50) not null")
 	private String u_email;
 	
@@ -53,7 +54,6 @@ public class User implements Serializable{
 	private String u_image;
 	@Column(columnDefinition="int not null default 0")
 	private Integer u_score;
-	@NonNull
 	@Column(columnDefinition="char(11) null default null")
 	private String u_tele;
 //	@DateTimeFormat(pattern="yyyy-MM-dd")
