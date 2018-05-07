@@ -24,9 +24,9 @@ public class SalerServiceImpl implements SalerService{
 			return false;
 		}
 		saler.setS_ID(UUID.randomUUID().toString().replace("-", ""));
-		saler.setS_image("/image/icons-portrait.png");
+		saler.setS_image("/image/"+ saler.getS_ID() +".png");
 		saler.setS_score(0);
-		saler.setS_signature("这个新手不太冷！");
+//		saler.setS_signature("这个新手不太冷！");
 		Saler getsaler = salerDao.saveAndFlush(saler);
 		System.out.println(getsaler);
 		if (getsaler!=null) {
@@ -35,32 +35,4 @@ public class SalerServiceImpl implements SalerService{
 			return false;
 		}
 	}
-	
-
-	
-//	// @desc 赋予用户ID
-//	// @依然存在问题
-//	private static int sequence = 0;
-//
-//	private static int length = 8;
-//
-//	public static synchronized String genID() {
-//		
-//		sequence = sequence >= 99999999 ? 1 : sequence + 1; 
-//		String index = Integer.toString(sequence);
-//		int old = index.length();
-//		if (length > old) {
-//			char[] c = new char[length];
-//			char[] x = index.toCharArray();
-//			int lim = c.length - x.length;
-//			for (int i = 0; i < lim; i++) {
-//				c[i] = '0';
-//			}
-//			System.arraycopy(x, 0, c, lim, x.length);
-//			return "sh" + new String(c);
-//		}
-//		return "sh" + index.substring(0, length);
-//	}
-
-
 }

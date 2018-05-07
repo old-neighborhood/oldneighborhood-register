@@ -38,11 +38,10 @@ public class UserServiceImpl implements UserService {
 		 * 的结果串会比较长。
 		 */
 		user.setU_ID(UUID.randomUUID().toString().replace("-", ""));
-		user.setU_image("/image/icons-portrait.png");
+		user.setU_image("/image/"+ user.getU_ID() +".png");
 		user.setU_score(0);
-		user.setU_signature("这个新手不太冷！");
+//		user.setU_signature("这个新手不太冷！");
 		System.out.println(user.getU_ID());
-//		User getuser = userDao.save(user);
 		User getuser = userDao.save(user);
 		System.out.println(getuser);
 		if (getuser!=null) {
