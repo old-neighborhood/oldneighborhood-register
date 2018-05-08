@@ -24,7 +24,7 @@ public class SalerServiceImpl implements SalerService{
 			return false;
 		}
 		saler.setS_ID(UUID.randomUUID().toString().replace("-", ""));
-		saler.setS_image("/image/"+ saler.getS_ID() +".png");
+		saler.setS_image("/home/ubuntu/image/554c8d43389748f4a73bae0cad5cb4d7.png");
 		saler.setS_score(0);
 //		saler.setS_signature("这个新手不太冷！");
 		Saler getsaler = salerDao.saveAndFlush(saler);
